@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/dog/edit}" th:object="${dog}" method="post">
+    <label>
+        <input th:type="hidden" name="id" th:field="*{id}">
+    </label>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <label>
+                    <input type="text" required th:field="*{name}"/>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update dog"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/dog/delete}" th:object="${dog}" method="post">
+    <label>
+        <input th:type="hidden" name="id" th:field="*{id}">
+    </label>
+    <input type="submit" value="Delete dog">
+</form>
+</body>
+</html>
